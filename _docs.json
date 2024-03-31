@@ -1,0 +1,1517 @@
+[
+  {
+    "kind": "class",
+    "name": "AbstractDisposable",
+    "location": {
+      "filename": "file:///workspaces/dispose/src/abstract_disposable.ts",
+      "line": 24,
+      "col": 0,
+      "byteIndex": 543
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "An abstract class implementation of the {@link IDisposable} interface."
+    },
+    "classDef": {
+      "isAbstract": true,
+      "constructors": [],
+      "properties": [
+        {
+          "jsDoc": {
+            "doc": "The state of this AbstractDisposable instance."
+          },
+          "tsType": {
+            "repr": "InternalState",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "InternalState"
+            }
+          },
+          "readonly": false,
+          "accessibility": "protected",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "state",
+          "location": {
+            "filename": "file:///workspaces/dispose/src/abstract_disposable.ts",
+            "line": 28,
+            "col": 2,
+            "byteIndex": 675
+          }
+        }
+      ],
+      "indexSignatures": [],
+      "methods": [
+        {
+          "jsDoc": {
+            "doc": "Asserts that an {@link IDisposable} instance has not been disposed, optionally with a specific message.\n",
+            "tags": [
+              {
+                "kind": "param",
+                "name": "disposable",
+                "doc": "- The object to check."
+              },
+              {
+                "kind": "param",
+                "name": "message",
+                "doc": "- The message to include in the exception, if thrown."
+              },
+              {
+                "kind": "unsupported",
+                "value": "@throws {ObjectDisposedException} If the object is disposed."
+              }
+            ]
+          },
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": true,
+          "name": "assertNotDisposed",
+          "kind": "method",
+          "functionDef": {
+            "params": [
+              {
+                "kind": "identifier",
+                "name": "disposable",
+                "optional": false,
+                "tsType": {
+                  "repr": "IDisposable",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "IDisposable"
+                  }
+                }
+              },
+              {
+                "kind": "identifier",
+                "name": "message",
+                "optional": true,
+                "tsType": {
+                  "repr": "string",
+                  "kind": "keyword",
+                  "keyword": "string"
+                }
+              }
+            ],
+            "returnType": {
+              "repr": "void",
+              "kind": "keyword",
+              "keyword": "void"
+            },
+            "hasBody": true,
+            "isAsync": false,
+            "isGenerator": false,
+            "typeParams": []
+          },
+          "location": {
+            "filename": "file:///workspaces/dispose/src/abstract_disposable.ts",
+            "line": 42,
+            "col": 2,
+            "byteIndex": 1145
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Whether the resource for this AbstractDisposable have been freed up."
+          },
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "isDisposed",
+          "kind": "getter",
+          "functionDef": {
+            "params": [],
+            "returnType": {
+              "repr": "boolean",
+              "kind": "keyword",
+              "keyword": "boolean"
+            },
+            "hasBody": true,
+            "isAsync": false,
+            "isGenerator": false,
+            "typeParams": []
+          },
+          "location": {
+            "filename": "file:///workspaces/dispose/src/abstract_disposable.ts",
+            "line": 52,
+            "col": 2,
+            "byteIndex": 1378
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Returns the string representation of this AbstractDisposable."
+          },
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "toString",
+          "kind": "method",
+          "functionDef": {
+            "params": [],
+            "returnType": {
+              "repr": "string",
+              "kind": "keyword",
+              "keyword": "string"
+            },
+            "hasBody": true,
+            "isAsync": false,
+            "isGenerator": false,
+            "typeParams": []
+          },
+          "location": {
+            "filename": "file:///workspaces/dispose/src/abstract_disposable.ts",
+            "line": 59,
+            "col": 2,
+            "byteIndex": 1533
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Initiates the process of freeing up unmanaged resources and finalizing this AbstractDisposable."
+          },
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "dispose",
+          "kind": "method",
+          "functionDef": {
+            "params": [],
+            "returnType": {
+              "repr": "void",
+              "kind": "keyword",
+              "keyword": "void"
+            },
+            "hasBody": true,
+            "isAsync": false,
+            "isGenerator": false,
+            "typeParams": []
+          },
+          "location": {
+            "filename": "file:///workspaces/dispose/src/abstract_disposable.ts",
+            "line": 67,
+            "col": 2,
+            "byteIndex": 1797
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Asserts that this AbstractDisposable has not been disposed, optionally with a specific message.\n",
+            "tags": [
+              {
+                "kind": "param",
+                "name": "message",
+                "doc": "- The message to include in the exception, if thrown."
+              },
+              {
+                "kind": "unsupported",
+                "value": "@throws {ObjectDisposedException} If this AbstractDisposable has been disposed."
+              }
+            ]
+          },
+          "accessibility": "protected",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "assertNotDisposed",
+          "kind": "method",
+          "functionDef": {
+            "params": [
+              {
+                "kind": "identifier",
+                "name": "message",
+                "optional": true,
+                "tsType": {
+                  "repr": "string",
+                  "kind": "keyword",
+                  "keyword": "string"
+                }
+              }
+            ],
+            "returnType": {
+              "repr": "void",
+              "kind": "keyword",
+              "keyword": "void"
+            },
+            "hasBody": true,
+            "isAsync": false,
+            "isGenerator": false,
+            "typeParams": []
+          },
+          "location": {
+            "filename": "file:///workspaces/dispose/src/abstract_disposable.ts",
+            "line": 83,
+            "col": 2,
+            "byteIndex": 2232
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Free up resources."
+          },
+          "accessibility": "protected",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "onDispose",
+          "kind": "method",
+          "functionDef": {
+            "params": [],
+            "returnType": {
+              "repr": "void",
+              "kind": "keyword",
+              "keyword": "void"
+            },
+            "hasBody": true,
+            "isAsync": false,
+            "isGenerator": false,
+            "typeParams": []
+          },
+          "location": {
+            "filename": "file:///workspaces/dispose/src/abstract_disposable.ts",
+            "line": 90,
+            "col": 2,
+            "byteIndex": 2386
+          }
+        }
+      ],
+      "extends": null,
+      "implements": [
+        {
+          "repr": "IDisposable",
+          "kind": "typeRef",
+          "typeRef": {
+            "typeParams": null,
+            "typeName": "IDisposable"
+          }
+        }
+      ],
+      "typeParams": [],
+      "superTypeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "assertNotDisposed",
+    "location": {
+      "filename": "file:///workspaces/dispose/src/assert_not_disposed.ts",
+      "line": 18,
+      "col": 0,
+      "byteIndex": 559
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Asserts that the specified object is not disposed, optionally with a specific message.\n",
+      "tags": [
+        {
+          "kind": "param",
+          "name": "disposable",
+          "doc": "- The object to check."
+        },
+        {
+          "kind": "param",
+          "name": "message",
+          "doc": "- The message to include in the exception, if thrown."
+        },
+        {
+          "kind": "unsupported",
+          "value": "@throws {ObjectDisposedException} If the object is disposed."
+        }
+      ]
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "disposable",
+          "optional": false,
+          "tsType": {
+            "repr": "IDisposable",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "IDisposable"
+            }
+          }
+        },
+        {
+          "kind": "identifier",
+          "name": "message",
+          "optional": true,
+          "tsType": {
+            "repr": "string",
+            "kind": "keyword",
+            "keyword": "string"
+          }
+        }
+      ],
+      "returnType": {
+        "repr": "void",
+        "kind": "keyword",
+        "keyword": "void"
+      },
+      "hasBody": true,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "class",
+    "name": "DisposablePool",
+    "location": {
+      "filename": "file:///workspaces/dispose/src/disposable_pool.ts",
+      "line": 15,
+      "col": 0,
+      "byteIndex": 378
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "A class for collecting independant {@link IDisposable} objects into a single DisposablePool."
+    },
+    "classDef": {
+      "isAbstract": false,
+      "constructors": [
+        {
+          "jsDoc": {
+            "doc": "Creates a new instance of DisposablePool, with the keyed collection of {@link IDisposable} objects to pool together.\n",
+            "tags": [
+              {
+                "kind": "param",
+                "name": "disposables",
+                "doc": "- The keyed collection of {@link IDisposable} objects to pool together."
+              }
+            ]
+          },
+          "accessibility": null,
+          "hasBody": true,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "disposables",
+              "optional": false,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///workspaces/dispose/src/disposable_pool.ts",
+            "line": 22,
+            "col": 2,
+            "byteIndex": 716
+          }
+        }
+      ],
+      "properties": [
+        {
+          "jsDoc": {
+            "doc": "The pool of {@link IDisposable} objects."
+          },
+          "tsType": {
+            "repr": "",
+            "kind": "union",
+            "union": [
+              {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              },
+              {
+                "repr": "undefined",
+                "kind": "keyword",
+                "keyword": "undefined"
+              }
+            ]
+          },
+          "readonly": false,
+          "accessibility": "protected",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "_disposables",
+          "location": {
+            "filename": "file:///workspaces/dispose/src/disposable_pool.ts",
+            "line": 84,
+            "col": 2,
+            "byteIndex": 2258
+          }
+        }
+      ],
+      "indexSignatures": [],
+      "methods": [
+        {
+          "jsDoc": {
+            "doc": "The resources within the DisposablePool."
+          },
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "resources",
+          "kind": "getter",
+          "functionDef": {
+            "params": [],
+            "returnType": {
+              "repr": "",
+              "kind": "union",
+              "union": [
+                {
+                  "repr": "T",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "T"
+                  }
+                },
+                {
+                  "repr": "undefined",
+                  "kind": "keyword",
+                  "keyword": "undefined"
+                }
+              ]
+            },
+            "hasBody": true,
+            "isAsync": false,
+            "isGenerator": false,
+            "typeParams": []
+          },
+          "location": {
+            "filename": "file:///workspaces/dispose/src/disposable_pool.ts",
+            "line": 31,
+            "col": 2,
+            "byteIndex": 862
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "A convenience method to use the pool of {@link IDisposable} objects in a callback, disposing of the pool and this DisposablePool on completion.\n",
+            "tags": [
+              {
+                "kind": "param",
+                "name": "callback",
+                "doc": "- The function to perform with the pool of {@link IDisposable} objects."
+              },
+              {
+                "kind": "return",
+                "doc": "The result of the callback function."
+              }
+            ]
+          },
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "use",
+          "kind": "method",
+          "functionDef": {
+            "params": [
+              {
+                "kind": "identifier",
+                "name": "callback",
+                "optional": false,
+                "tsType": {
+                  "repr": "",
+                  "kind": "fnOrConstructor",
+                  "fnOrConstructor": {
+                    "constructor": false,
+                    "tsType": {
+                      "repr": "void",
+                      "kind": "keyword",
+                      "keyword": "void"
+                    },
+                    "params": [
+                      {
+                        "kind": "identifier",
+                        "name": "disposables",
+                        "optional": false,
+                        "tsType": {
+                          "repr": "T",
+                          "kind": "typeRef",
+                          "typeRef": {
+                            "typeParams": null,
+                            "typeName": "T"
+                          }
+                        }
+                      },
+                      {
+                        "kind": "identifier",
+                        "name": "self",
+                        "optional": false,
+                        "tsType": {
+                          "repr": "this",
+                          "kind": "this",
+                          "this": true
+                        }
+                      }
+                    ],
+                    "typeParams": []
+                  }
+                }
+              }
+            ],
+            "returnType": {
+              "repr": "this",
+              "kind": "this",
+              "this": true
+            },
+            "hasBody": true,
+            "isAsync": false,
+            "isGenerator": false,
+            "typeParams": [
+              {
+                "name": "R"
+              }
+            ]
+          },
+          "location": {
+            "filename": "file:///workspaces/dispose/src/disposable_pool.ts",
+            "line": 41,
+            "col": 2,
+            "byteIndex": 1288
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "A convenience method to use the pool of {@link IDisposable} objects in a callback, disposing of the pool and this DisposablePool on completion.\n",
+            "tags": [
+              {
+                "kind": "param",
+                "name": "callback",
+                "doc": "- The function to perform with the pool of {@link IDisposable} objects."
+              },
+              {
+                "kind": "return",
+                "doc": "The result of the callback function."
+              }
+            ]
+          },
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "useAsync",
+          "kind": "method",
+          "functionDef": {
+            "params": [
+              {
+                "kind": "identifier",
+                "name": "callback",
+                "optional": false,
+                "tsType": {
+                  "repr": "",
+                  "kind": "fnOrConstructor",
+                  "fnOrConstructor": {
+                    "constructor": false,
+                    "tsType": {
+                      "repr": "Promise",
+                      "kind": "typeRef",
+                      "typeRef": {
+                        "typeParams": [
+                          {
+                            "repr": "void",
+                            "kind": "keyword",
+                            "keyword": "void"
+                          }
+                        ],
+                        "typeName": "Promise"
+                      }
+                    },
+                    "params": [
+                      {
+                        "kind": "identifier",
+                        "name": "disposables",
+                        "optional": false,
+                        "tsType": {
+                          "repr": "T",
+                          "kind": "typeRef",
+                          "typeRef": {
+                            "typeParams": null,
+                            "typeName": "T"
+                          }
+                        }
+                      },
+                      {
+                        "kind": "identifier",
+                        "name": "self",
+                        "optional": false,
+                        "tsType": {
+                          "repr": "this",
+                          "kind": "this",
+                          "this": true
+                        }
+                      }
+                    ],
+                    "typeParams": []
+                  }
+                }
+              }
+            ],
+            "returnType": {
+              "repr": "Promise",
+              "kind": "typeRef",
+              "typeRef": {
+                "typeParams": [
+                  {
+                    "repr": "this",
+                    "kind": "this",
+                    "this": true
+                  }
+                ],
+                "typeName": "Promise"
+              }
+            },
+            "hasBody": true,
+            "isAsync": true,
+            "isGenerator": false,
+            "typeParams": [
+              {
+                "name": "R"
+              }
+            ]
+          },
+          "location": {
+            "filename": "file:///workspaces/dispose/src/disposable_pool.ts",
+            "line": 63,
+            "col": 2,
+            "byteIndex": 1877
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Disposes the pool of {@link IDisposable} objects, then disposes this DisposablePool.\n",
+            "tags": [
+              {
+                "kind": "return",
+                "doc": "An array of exceptions that occurred during disposal, if any."
+              }
+            ]
+          },
+          "accessibility": "protected",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "onDispose",
+          "kind": "method",
+          "functionDef": {
+            "params": [],
+            "returnType": {
+              "repr": "void",
+              "kind": "keyword",
+              "keyword": "void"
+            },
+            "hasBody": true,
+            "isAsync": false,
+            "isGenerator": false,
+            "typeParams": []
+          },
+          "location": {
+            "filename": "file:///workspaces/dispose/src/disposable_pool.ts",
+            "line": 91,
+            "col": 2,
+            "byteIndex": 2483
+          }
+        }
+      ],
+      "extends": "AbstractDisposable",
+      "implements": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "",
+            "kind": "typeLiteral",
+            "typeLiteral": {
+              "methods": [],
+              "properties": [],
+              "callSignatures": [],
+              "indexSignatures": [
+                {
+                  "readonly": false,
+                  "params": [
+                    {
+                      "kind": "identifier",
+                      "name": "key",
+                      "optional": false,
+                      "tsType": {
+                        "repr": "string",
+                        "kind": "keyword",
+                        "keyword": "string"
+                      }
+                    }
+                  ],
+                  "tsType": {
+                    "repr": "IDisposable",
+                    "kind": "typeRef",
+                    "typeRef": {
+                      "typeParams": null,
+                      "typeName": "IDisposable"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "superTypeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "dispose",
+    "location": {
+      "filename": "file:///workspaces/dispose/src/dispose.ts",
+      "line": 18,
+      "col": 0,
+      "byteIndex": 561
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Disposes an array of {@link IDisposable} objects returning any exceptions that may have occrred during disposal.\n",
+      "tags": [
+        {
+          "kind": "param",
+          "name": "disposables",
+          "doc": "- The array of {@link IDisposable} objects to dispose."
+        },
+        {
+          "kind": "return",
+          "doc": "An array of exceptions that occurred during disposal, if any."
+        }
+      ]
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "rest",
+          "arg": {
+            "kind": "identifier",
+            "name": "disposables",
+            "optional": false,
+            "tsType": null
+          },
+          "tsType": {
+            "repr": "",
+            "kind": "array",
+            "array": {
+              "repr": "IDisposable",
+              "kind": "typeRef",
+              "typeRef": {
+                "typeParams": null,
+                "typeName": "IDisposable"
+              }
+            }
+          }
+        }
+      ],
+      "returnType": {
+        "repr": "",
+        "kind": "union",
+        "union": [
+          {
+            "repr": "",
+            "kind": "array",
+            "array": {
+              "repr": "",
+              "kind": "parenthesized",
+              "parenthesized": {
+                "repr": "",
+                "kind": "union",
+                "union": [
+                  {
+                    "repr": "Error",
+                    "kind": "typeRef",
+                    "typeRef": {
+                      "typeParams": null,
+                      "typeName": "Error"
+                    }
+                  },
+                  {
+                    "repr": "Exception",
+                    "kind": "typeRef",
+                    "typeRef": {
+                      "typeParams": null,
+                      "typeName": "Exception"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "repr": "undefined",
+            "kind": "keyword",
+            "keyword": "undefined"
+          }
+        ]
+      },
+      "hasBody": true,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "function",
+    "name": "using",
+    "location": {
+      "filename": "file:///workspaces/dispose/src/using.ts",
+      "line": 18,
+      "col": 0,
+      "byteIndex": 581
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Performs a callback function with the provided {@link IDisposable} disposing on completion, returning any exceptions that may have occured during disposal.\n",
+      "tags": [
+        {
+          "kind": "param",
+          "name": "disposable",
+          "doc": "- The {@link IDisposable} object to use."
+        },
+        {
+          "kind": "param",
+          "name": "callback",
+          "doc": "- The function to perform with the `disposable`."
+        },
+        {
+          "kind": "return",
+          "doc": "The result of the `callback` function."
+        }
+      ]
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "disposable",
+          "optional": false,
+          "tsType": {
+            "repr": "T",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "T"
+            }
+          }
+        },
+        {
+          "kind": "identifier",
+          "name": "callback",
+          "optional": false,
+          "tsType": {
+            "repr": "",
+            "kind": "fnOrConstructor",
+            "fnOrConstructor": {
+              "constructor": false,
+              "tsType": {
+                "repr": "R",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "R"
+                }
+              },
+              "params": [
+                {
+                  "kind": "identifier",
+                  "name": "disposable",
+                  "optional": false,
+                  "tsType": {
+                    "repr": "T",
+                    "kind": "typeRef",
+                    "typeRef": {
+                      "typeParams": null,
+                      "typeName": "T"
+                    }
+                  }
+                }
+              ],
+              "typeParams": []
+            }
+          }
+        }
+      ],
+      "returnType": {
+        "repr": "R",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": null,
+          "typeName": "R"
+        }
+      },
+      "hasBody": true,
+      "isAsync": false,
+      "isGenerator": false,
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "IDisposable",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "IDisposable"
+            }
+          }
+        },
+        {
+          "name": "R"
+        }
+      ]
+    }
+  },
+  {
+    "kind": "function",
+    "name": "usingAsync",
+    "location": {
+      "filename": "file:///workspaces/dispose/src/using.ts",
+      "line": 36,
+      "col": 0,
+      "byteIndex": 1141
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Asynchronously performs a callback function with the provided {@link IDisposable} disposing on completion, returning any exceptions that may have occured during disposal.\n",
+      "tags": [
+        {
+          "kind": "param",
+          "name": "disposable",
+          "doc": "- The {@link IDisposable} object to use."
+        },
+        {
+          "kind": "param",
+          "name": "callback",
+          "doc": "- The function to perform with the `disposable`."
+        },
+        {
+          "kind": "return",
+          "doc": "The result of the `callback` function."
+        }
+      ]
+    },
+    "functionDef": {
+      "params": [
+        {
+          "kind": "identifier",
+          "name": "disposable",
+          "optional": false,
+          "tsType": {
+            "repr": "T",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "T"
+            }
+          }
+        },
+        {
+          "kind": "identifier",
+          "name": "callback",
+          "optional": false,
+          "tsType": {
+            "repr": "",
+            "kind": "fnOrConstructor",
+            "fnOrConstructor": {
+              "constructor": false,
+              "tsType": {
+                "repr": "Promise",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": [
+                    {
+                      "repr": "R",
+                      "kind": "typeRef",
+                      "typeRef": {
+                        "typeParams": null,
+                        "typeName": "R"
+                      }
+                    }
+                  ],
+                  "typeName": "Promise"
+                }
+              },
+              "params": [
+                {
+                  "kind": "identifier",
+                  "name": "disposable",
+                  "optional": false,
+                  "tsType": {
+                    "repr": "T",
+                    "kind": "typeRef",
+                    "typeRef": {
+                      "typeParams": null,
+                      "typeName": "T"
+                    }
+                  }
+                }
+              ],
+              "typeParams": []
+            }
+          }
+        }
+      ],
+      "returnType": {
+        "repr": "Promise",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": [
+            {
+              "repr": "R",
+              "kind": "typeRef",
+              "typeRef": {
+                "typeParams": null,
+                "typeName": "R"
+              }
+            }
+          ],
+          "typeName": "Promise"
+        }
+      },
+      "hasBody": true,
+      "isAsync": true,
+      "isGenerator": false,
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "IDisposable",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "IDisposable"
+            }
+          }
+        },
+        {
+          "name": "R"
+        }
+      ]
+    }
+  },
+  {
+    "kind": "variable",
+    "name": "VERSION",
+    "location": {
+      "filename": "file:///workspaces/dispose/src/constants.ts",
+      "line": 10,
+      "col": 13,
+      "byteIndex": 193
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The current release version of the package."
+    },
+    "variableDef": {
+      "tsType": {
+        "repr": "0.0.1",
+        "kind": "literal",
+        "literal": {
+          "kind": "string",
+          "string": "0.0.1"
+        }
+      },
+      "kind": "const"
+    }
+  },
+  {
+    "kind": "class",
+    "name": "ObjectDisposedException",
+    "location": {
+      "filename": "file:///workspaces/dispose/src/exceptions/object_disposed_exception.ts",
+      "line": 22,
+      "col": 0,
+      "byteIndex": 545
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "An exception raised when an operation is attempted on a disposed {@link IDisposable}."
+    },
+    "classDef": {
+      "isAbstract": false,
+      "constructors": [
+        {
+          "jsDoc": {
+            "doc": "Creates a new ObjectDisposedException with the default message description."
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [],
+          "location": {
+            "filename": "file:///workspaces/dispose/src/exceptions/object_disposed_exception.ts",
+            "line": 28,
+            "col": 2,
+            "byteIndex": 781
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Creates an ObjectDisposedException with a message description.\n",
+            "tags": [
+              {
+                "kind": "param",
+                "name": "message",
+                "doc": "A human-readable description of the exception."
+              }
+            ]
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "message",
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///workspaces/dispose/src/exceptions/object_disposed_exception.ts",
+            "line": 35,
+            "col": 2,
+            "byteIndex": 951
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Creates an ObjectDisposedException with a message description created from the exception data.\n",
+            "tags": [
+              {
+                "kind": "param",
+                "name": "data",
+                "doc": "Relevant data about the exception."
+              }
+            ]
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "data",
+              "optional": false,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///workspaces/dispose/src/exceptions/object_disposed_exception.ts",
+            "line": 42,
+            "col": 2,
+            "byteIndex": 1153
+          }
+        },
+        {
+          "jsDoc": {
+            "doc": "Creates an ObjectDisposedException with a message description and additional relevant data.\n",
+            "tags": [
+              {
+                "kind": "param",
+                "name": "message",
+                "doc": "The human-readable description of the exception."
+              },
+              {
+                "kind": "param",
+                "name": "data",
+                "doc": "Additional, relevant data about the exception."
+              }
+            ]
+          },
+          "accessibility": null,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "message",
+              "optional": false,
+              "tsType": {
+                "repr": "string",
+                "kind": "keyword",
+                "keyword": "string"
+              }
+            },
+            {
+              "kind": "identifier",
+              "name": "data",
+              "optional": false,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "location": {
+            "filename": "file:///workspaces/dispose/src/exceptions/object_disposed_exception.ts",
+            "line": 50,
+            "col": 2,
+            "byteIndex": 1425
+          }
+        },
+        {
+          "accessibility": null,
+          "hasBody": true,
+          "name": "constructor",
+          "params": [
+            {
+              "kind": "assign",
+              "left": {
+                "kind": "identifier",
+                "name": "messageOrData",
+                "optional": false,
+                "tsType": {
+                  "repr": "",
+                  "kind": "union",
+                  "union": [
+                    {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    {
+                      "repr": "T",
+                      "kind": "typeRef",
+                      "typeRef": {
+                        "typeParams": null,
+                        "typeName": "T"
+                      }
+                    }
+                  ]
+                }
+              },
+              "right": "DEFAULT_MESSAGE",
+              "tsType": null
+            },
+            {
+              "kind": "assign",
+              "left": {
+                "kind": "identifier",
+                "name": "data",
+                "optional": false,
+                "tsType": {
+                  "repr": "T",
+                  "kind": "typeRef",
+                  "typeRef": {
+                    "typeParams": null,
+                    "typeName": "T"
+                  }
+                }
+              },
+              "right": "[UNSUPPORTED]",
+              "tsType": null
+            }
+          ],
+          "location": {
+            "filename": "file:///workspaces/dispose/src/exceptions/object_disposed_exception.ts",
+            "line": 52,
+            "col": 2,
+            "byteIndex": 1467
+          }
+        }
+      ],
+      "properties": [
+        {
+          "jsDoc": {
+            "doc": "The numeric code unique to this type of exception."
+          },
+          "tsType": {
+            "repr": "number",
+            "kind": "keyword",
+            "keyword": "number"
+          },
+          "readonly": false,
+          "accessibility": "public",
+          "optional": false,
+          "isAbstract": false,
+          "isStatic": false,
+          "name": "code",
+          "location": {
+            "filename": "file:///workspaces/dispose/src/exceptions/object_disposed_exception.ts",
+            "line": 70,
+            "col": 2,
+            "byteIndex": 1884
+          }
+        }
+      ],
+      "indexSignatures": [],
+      "methods": [],
+      "extends": "InvalidException",
+      "implements": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "constraint": {
+            "repr": "ObjectDisposedExceptionInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "ObjectDisposedExceptionInit"
+            }
+          },
+          "default": {
+            "repr": "ObjectDisposedExceptionInit",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "ObjectDisposedExceptionInit"
+            }
+          }
+        }
+      ],
+      "superTypeParams": [
+        {
+          "repr": "T",
+          "kind": "typeRef",
+          "typeRef": {
+            "typeParams": null,
+            "typeName": "T"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "typeAlias",
+    "name": "ObjectDisposedExceptionInit",
+    "location": {
+      "filename": "file:///workspaces/dispose/src/exceptions/object_disposed_exception.ts",
+      "line": 12,
+      "col": 0,
+      "byteIndex": 308
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Additional data about the ObjectDisposedException exception."
+    },
+    "typeAliasDef": {
+      "tsType": {
+        "repr": "BaseExceptionData",
+        "kind": "typeRef",
+        "typeRef": {
+          "typeParams": [
+            {
+              "repr": "",
+              "kind": "typeLiteral",
+              "typeLiteral": {
+                "methods": [],
+                "properties": [
+                  {
+                    "name": "objectName",
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                      "repr": "string",
+                      "kind": "keyword",
+                      "keyword": "string"
+                    },
+                    "typeParams": []
+                  }
+                ],
+                "callSignatures": [],
+                "indexSignatures": []
+              }
+            }
+          ],
+          "typeName": "BaseExceptionData"
+        }
+      },
+      "typeParams": []
+    }
+  },
+  {
+    "kind": "interface",
+    "name": "IDisposable",
+    "location": {
+      "filename": "file:///workspaces/dispose/src/types/interfaces.ts",
+      "line": 10,
+      "col": 0,
+      "byteIndex": 213
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Provides a mechanism to dispose of resources associated with the current class."
+    },
+    "interfaceDef": {
+      "extends": [],
+      "methods": [
+        {
+          "name": "dispose",
+          "kind": "method",
+          "location": {
+            "filename": "file:///workspaces/dispose/src/types/interfaces.ts",
+            "line": 14,
+            "col": 2,
+            "byteIndex": 322
+          },
+          "jsDoc": {
+            "doc": "Dispose of resources associated with the current instance."
+          },
+          "optional": false,
+          "params": [],
+          "returnType": {
+            "repr": "void",
+            "kind": "keyword",
+            "keyword": "void"
+          },
+          "typeParams": []
+        }
+      ],
+      "properties": [
+        {
+          "name": "isDisposed",
+          "location": {
+            "filename": "file:///workspaces/dispose/src/types/interfaces.ts",
+            "line": 19,
+            "col": 2,
+            "byteIndex": 426
+          },
+          "jsDoc": {
+            "doc": "A value indicating whether the current instance has been disposed."
+          },
+          "params": [],
+          "computed": false,
+          "optional": false,
+          "tsType": {
+            "repr": "boolean",
+            "kind": "keyword",
+            "keyword": "boolean"
+          },
+          "typeParams": []
+        }
+      ],
+      "callSignatures": [],
+      "indexSignatures": [],
+      "typeParams": []
+    }
+  }
+]

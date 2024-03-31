@@ -1,0 +1,32 @@
+/**
+ * This file exports the assertNotDisposed function.
+ *
+ * @copyright 2024 integereleven. All rights reserved. MIT license.
+ */
+
+import { ObjectDisposedException } from './exceptions/object_disposed_exception.ts';
+
+import type { IDisposable } from './types/interfaces.ts';
+
+/**
+ * Asserts that the specified object is not disposed, optionally with a specific message.
+ *
+ * @param disposable - The object to check.
+ * @param message - The message to include in the exception, if thrown.
+ * @throws {ObjectDisposedException} If the object is disposed.
+ */
+export function assertNotDisposed(
+  disposable: IDisposable,
+  message?: string,
+): void {
+  if (disposable.isDisposed) {
+    const objectName = disposable.constructor.name;
+    const exception = message
+      ? new ObjectDisposedException(message, {
+        objectName,
+      })
+      : new ObjectDisposedException({ objectName });
+
+    throw exception;
+  }
+}
