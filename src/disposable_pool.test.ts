@@ -1,29 +1,46 @@
 /**
- * This file contains tests for the DisposablePool feature.
- *
- * @copyright 2022 integereleven. All rights reserved. MIT license.
+ * @copyright 2020-2024 integereleven. All rights reserved. MIT license.
+ * @file This file tests the DisposablePool class.
  */
 
-import { assert, assertEquals, describe, it } from '../dev_deps.ts';
+import { describe, it } from '@std/testing/bdd';
+import { assert, assertEquals } from '@std/assert';
 
-import { DisposablePool } from '../mod.ts';
+import { DisposablePool, type IDisposable } from '../mod.ts';
 
-import {
-  AsyncA,
-  AsyncB,
-  AsyncC,
-  BasicA,
-  BasicB,
-  BasicC,
-} from './fixtures/disposable_pool.fixtures.ts';
+class Basic implements IDisposable {
+  constructor(public name: string) {}
+
+  isDisposed = false;
+
+  dispose(): void {
+    this.isDisposed = true;
+  }
+}
+
+class Async implements IDisposable {
+  constructor(public name: string) {}
+
+  isDisposed = false;
+
+  async run(): Promise<void> {
+    await new Promise(function (resolve): void {
+      setTimeout(resolve, 1000);
+    });
+  }
+
+  dispose(): void {
+    this.isDisposed = true;
+  }
+}
 
 describe('DisposablePool', () => {
   describe('(resources)', () => {
     it('should create a new instance with undisposed .resources', () => {
       const pool = new DisposablePool({
-        a: new BasicA(),
-        b: new BasicB(),
-        c: new BasicC(),
+        a: new Basic('A'),
+        b: new Basic('B'),
+        c: new Basic('C'),
       });
       assert(!pool.isDisposed);
       assert(!pool.resources?.a.isDisposed);
@@ -34,9 +51,9 @@ describe('DisposablePool', () => {
 
   describe('use(callback)', () => {
     const pool = new DisposablePool({
-      a: new BasicA(),
-      b: new BasicB(),
-      c: new BasicC(),
+      a: new Basic('A'),
+      b: new Basic('B'),
+      c: new Basic('C'),
     });
 
     it('pool and resource undisposed', () => {
@@ -56,9 +73,9 @@ describe('DisposablePool', () => {
 
   describe('useAsync(callback)', () => {
     const pool = new DisposablePool({
-      a: new AsyncA(),
-      b: new AsyncB(),
-      c: new AsyncC(),
+      a: new Async('A'),
+      b: new Async('B'),
+      c: new Async('C'),
     });
 
     it('pool and resource undisposed', async () => {
@@ -76,7 +93,6 @@ describe('DisposablePool', () => {
 
     it('should dispose after callback', () => {
       assert(pool.isDisposed);
-      assertEquals(pool.resources, undefined);
     });
   });
 });

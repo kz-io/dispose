@@ -1,10 +1,9 @@
 /**
- * This file exports the disposeInternal function.
- *
- * @copyright 2024 integereleven. All rights reserved. MIT license.
+ * @copyright 2020-2024 integereleven. All rights reserved. MIT license.
+ * @file This file exports the disposeInternal internal function.
  */
 
-import type { Exception } from '../../deps.ts';
+import type { Exception } from '@kz/common-exceptions';
 import type { IDisposable } from '../types/interfaces.ts';
 
 /**
@@ -12,6 +11,54 @@ import type { IDisposable } from '../types/interfaces.ts';
  *
  * @param disposables - The array of {@link IDisposable} objects to dispose.
  * @returns An array of exceptions that occurred during disposal, if any.
+ *
+ * @example Good disposal
+ * ```ts
+ * import { assert } from '@std/assert';
+ * import { disposeInternal } from './dispose_internal.ts';
+ * import { AbstractDisposable } from '../abstract_disposable.ts';
+ *
+ * class Disposable extends AbstractDisposable {
+ *   protected onDispose() {
+ *     console.log('Disposed');
+ *   }
+ * }
+ *
+ * const a = new Disposable();
+ * const b = new Disposable();
+ * const c = new Disposable();
+ *
+ * const exceptions = disposeInternal([a, b, c]);
+ *
+ * assert(exceptions === undefined);
+ * ```
+ *
+ * @example Bad disposal
+ * ```ts
+ * import { assert } from '@std/assert';
+ * import { disposeInternal } from './dispose_internal.ts';
+ * import { AbstractDisposable } from '../abstract_disposable.ts';
+ *
+ * class Disposable extends AbstractDisposable {
+ *   constructor(private throwOnDispose = false) {
+ *     super();
+ *    }
+ *
+ *   protected onDispose() {
+ *    if (this.throwOnDispose) throw new Error('Dispose failed');
+ *     console.log('Disposed');
+ *   }
+ * }
+ *
+ * const a = new Disposable();
+ * const b = new Disposable(true);
+ * const c = new Disposable();
+ *
+ * const exceptions = disposeInternal([a, b, c]);
+ *
+ * assert(exceptions !== undefined);
+ * assert(exceptions.length === 1);
+ * ```
  */
 export function disposeInternal(
   disposables: IDisposable[],

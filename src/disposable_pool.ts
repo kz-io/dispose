@@ -1,7 +1,6 @@
 /**
- * Contains the class DisposablePool.
- *
- * @copyright 2024 integereleven. All rights reserved. MIT license.
+ * @copyright 2020-2024 integereleven. All rights reserved. MIT license.
+ * @file This file exports the DisposablePool class.
  */
 
 import { AbstractDisposable } from './abstract_disposable.ts';
@@ -10,7 +9,48 @@ import { dispose } from './dispose.ts';
 import type { IDisposable } from './types/mod.ts';
 
 /**
- * A class for collecting independant {@link IDisposable} objects into a single DisposablePool.
+ * A class for collecting independant {@link IDisposable} objects into a single `DisposablePool`.
+ *
+ * @example
+ * ```ts
+ * import { assert } from '@std/assert';
+ * import { DisposablePool } from './disposable_pool.ts';
+ * import type { IDisposable } from './types/interfaces.ts';
+ *
+ * class Async implements IDisposable {
+ *   constructor(public name: string) {}
+ *
+ *   isDisposed = false;
+ *
+ *   async run(): Promise<void> {
+ *     await new Promise(function (resolve): void {
+ *       setTimeout(resolve, 1000);
+ *     });
+ *   }
+ *
+ *   dispose(): void {
+ *     this.isDisposed = true;
+ *   }
+ * }
+ *
+ * const pool = new DisposablePool({
+ *   a: new Async('A'),
+ *   b: new Async('B'),
+ *   c: new Async('C'),
+ * });
+ *
+ * pool.useAsync(async ({ a, b, c }, p) => {
+ *   await a.run();
+ *   await b.run();
+ *   await c.run();
+ *
+ *   assert(a.isDisposed);
+ *   assert(b.isDisposed);
+ *   assert(c.isDisposed);
+ * });
+ *
+ * assert(pool.isDisposed);
+ * ```
  */
 export class DisposablePool<T extends { [key: string]: IDisposable }>
   extends AbstractDisposable {

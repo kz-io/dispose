@@ -1,10 +1,9 @@
 /**
- * This file exports all of the package exceptions into the public API.
- *
- * @copyright 2024 integereleven. All rights reserved. MIT license.
+ * @copyright 2020-2024 integereleven. All rights reserved. MIT license.
+ * @file Exports exceptions and related symbols for the module.
  */
 
 export {
   ObjectDisposedException,
-  type ObjectDisposedExceptionInit,
+  type ObjectDisposedExceptionData,
 } from './object_disposed_exception.ts';

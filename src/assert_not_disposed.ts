@@ -1,7 +1,6 @@
 /**
- * This file exports the assertNotDisposed function.
- *
- * @copyright 2024 integereleven. All rights reserved. MIT license.
+ * @copyright 2020-2024 integereleven. All rights reserved. MIT license.
+ * @file This file exports the assertNotDisposed function.
  */
 
 import { ObjectDisposedException } from './exceptions/object_disposed_exception.ts';
@@ -14,6 +13,22 @@ import type { IDisposable } from './types/interfaces.ts';
  * @param disposable - The object to check.
  * @param message - The message to include in the exception, if thrown.
  * @throws {ObjectDisposedException} If the object is disposed.
+ *
+ * @example
+ * ```ts
+ * import { assertThrows } from '@std/assert';
+ * import type { IDisposable } from './types/interfaces.ts';
+ * import { assertNotDisposed } from './assert_not_disposed.ts';
+ *
+ * const disposable: IDisposable = {
+ *   isDisposed: true,
+ *   dispose() {
+ *     this.isDisposed = true;
+ *   }
+ * };
+ *
+ * assertThrows(() => assertNotDisposed(disposable));
+ * ```
  */
 export function assertNotDisposed(
   disposable: IDisposable,

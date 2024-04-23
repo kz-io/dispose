@@ -1,7 +1,6 @@
 /**
- * This file contains internal package features, which should not be re-exported into the public API.
- *
- * @copyright 2024 integereleven. All rights reserved. MIT license.
+ * @copyright 2020-2024 integereleven. All rights reserved. MIT license.
+ * @file Exports module-local symbols.
  */
 
 export { disposeInternal } from './dispose_internal.ts';

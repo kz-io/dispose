@@ -1,7 +1,6 @@
 /**
- * This file re-exports the package enums, type aliases, and interfaces into the public API.
- *
- * @copyright 2024 integereleven. All rights reserved. MIT license.
+ * @copyright 2020-2024 integereleven. All rights reserved. MIT license.
+ * @file Exports public types from the module.
  */
 
 export type { IDisposable } from './interfaces.ts';

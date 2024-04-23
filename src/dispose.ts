@@ -1,12 +1,11 @@
 /**
- * This file exports the dispose function.
- *
- * @copyright 2024 integereleven. All rights reserved. MIT license.
+ * @copyright 2020-2024 integereleven. All rights reserved. MIT license.
+ * @file This file exports the dispose function.
  */
 
 import { disposeInternal } from './_internals/mod.ts';
 
-import type { Exception } from '../deps.ts';
+import type { Exception } from '@kz/common-exceptions';
 import type { IDisposable } from './types/interfaces.ts';
 
 /**
@@ -14,6 +13,26 @@ import type { IDisposable } from './types/interfaces.ts';
  *
  * @param disposables - The array of {@link IDisposable} objects to dispose.
  * @returns An array of exceptions that occurred during disposal, if any.
+ *
+ * @example
+ * ```ts
+ * import { assert } from '@std/assert';
+ * import { dispose } from './dispose.ts';
+ * import type { IDisposable } from './types/interfaces.ts';
+ *
+ * const disposable: IDisposable = {
+ *    dispose(): void {
+ *     this.isDisposed = true;
+ *   },
+ *   isDisposed: false,
+ * };
+ *
+ * assert(!disposable.isDisposed);
+ *
+ * dispose(disposable);
+ *
+ * assert(disposable.isDisposed);
+ * ```
  */
 export function dispose(
   ...disposables: IDisposable[]
