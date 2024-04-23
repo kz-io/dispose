@@ -43,7 +43,7 @@ jobs:
         uses: codecov/codecov-action@v4.0.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          slug: kz-io/common-exceptions
+          slug: kz-io/dispose
         
   cleanliness:
     runs-on: ${{ matrix.os }}
