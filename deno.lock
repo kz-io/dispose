@@ -2,7 +2,7 @@
   "version": "3",
   "packages": {
     "specifiers": {
-      "jsr:@kz/common-exceptions": "jsr:@kz/common-exceptions@0.0.1",
+      "jsr:@kz/common-exceptions@^0.0.1": "jsr:@kz/common-exceptions@0.0.1",
       "jsr:@kz/common-types@0.0.2": "jsr:@kz/common-types@0.0.2",
       "jsr:@std/assert@^0.221.0": "jsr:@std/assert@0.221.0",
       "jsr:@std/fmt@^0.221.0": "jsr:@std/fmt@0.221.0",
@@ -38,8 +38,8 @@
   "remote": {},
   "workspace": {
     "dependencies": [
-      "jsr:@kz/common-exceptions",
-      "jsr:@kz/common-types@0.0.2",
+      "jsr:@kz/common-exceptions@^0.0.1",
+      "jsr:@kz/common-types@^0.0.2",
       "jsr:@std/assert@^0.221.0",
       "jsr:@std/testing@^0.221.0"
     ]
