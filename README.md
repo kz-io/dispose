@@ -1,22 +1,66 @@
 <p align="center">
-<img alt="kz logo" height="48" src="https://raw.githubusercontent.com/i11n/.github/main/svg/kz/color/kz.svg" />
+<img alt="kz logo" height="64" src="https://raw.githubusercontent.com/i11n/.github/main/svg/kz/color/kz.svg" />
 <strong>dispose</strong>
 </p>
 
 <p align="center">
-kz is a collection of easy-to-use utility and feature libraries for creating anything you want with the <a href="https://deno.com">Deno</a> runtime.
+kz is a library providing heavily tested and documented features with
+consistent and predictable APIs designed to simplify the development and
+maintenance of complex, performant, and scalable
+<a href="https://deno.com">Deno</a> applications.
 </p>
 
 <h1 align="center">@kz/dispose</h1>
-
 <p align="center">
-A collection of types and features for using and disposing of managed resources.
+The <code>@kz/core/dispose</code> module provides types and features for using and disposing of managed resources.
 </p>
 
 <p align="center">
 <a href="https://jsr.io/@kz/dispose">Overview</a> |
 <a href="https://jsr.io/@kz/dispose/doc">API Docs</a>
 </p>
+
+---
+
+The dispose pattern allows developers to create classes associated with
+resources that need to be released when they are no longer needed.
+
+```ts
+import { AbstractDisposable, usingAsync } from './mod.ts';
+
+class SwapiClient extends AbstractDisposable {
+  protected cache = new Map<string, string>();
+  constructor(protected baseUrl: string = 'https://swapi.dev/api') {
+    super();
+  }
+  public dispose(): void {
+    this.cache.clear();
+  }
+  protected async request(slug: string, id?: number): Promise<string> {
+    const { cache, baseUrl } = this;
+    const uri = id ? `${baseUrl}/${slug}/${id}` : `${baseUrl}/${slug}`;
+    const cached = cache.get(uri);
+
+    if (cached) return cached;
+
+    const response = await fetch(uri);
+    const data = await response.text();
+
+    cache.set(uri, data);
+
+    return data;
+  }
+  public async getPeople(id?: number): Promise<string> {
+    return await this.request('people', id);
+  }
+}
+
+usingAsync(new SwapiClient(), async (client) => {
+  const people = await client.getPeople(1);
+
+  console.log(people);
+});
+```
 
 ## Contributing
 
