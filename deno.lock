@@ -2,21 +2,21 @@
   "version": "3",
   "packages": {
     "specifiers": {
-      "jsr:@kz/common-exceptions@^0.0.1": "jsr:@kz/common-exceptions@0.0.1",
-      "jsr:@kz/common-types@0.0.2": "jsr:@kz/common-types@0.0.2",
+      "jsr:@kz/common-exceptions@0.0.2": "jsr:@kz/common-exceptions@0.0.2",
+      "jsr:@kz/common-types@^0.0.6": "jsr:@kz/common-types@0.0.6",
       "jsr:@std/assert@^0.221.0": "jsr:@std/assert@0.221.0",
       "jsr:@std/fmt@^0.221.0": "jsr:@std/fmt@0.221.0",
       "jsr:@std/testing@^0.221.0": "jsr:@std/testing@0.221.0"
     },
     "jsr": {
-      "@kz/common-exceptions@0.0.1": {
-        "integrity": "5b0a63a33e0d1615436353c0f0ce2957654bc79a2503e0726979d4f6166e8813",
+      "@kz/common-exceptions@0.0.2": {
+        "integrity": "ebd6e38fe554379f343a40f5df5d430a24837ada93bddf0411d4c0bb283626dd",
         "dependencies": [
-          "jsr:@kz/common-types@0.0.2"
+          "jsr:@kz/common-types@^0.0.6"
         ]
       },
-      "@kz/common-types@0.0.2": {
-        "integrity": "48beb5d32c359804b82081cd6ed999014137f69d31d87b264e3d4a9cb9433a34"
+      "@kz/common-types@0.0.6": {
+        "integrity": "992c4a9502432537d43ece19e9e062fce123afe64dcba8a3b1b1c5086a8fa430"
       },
       "@std/assert@0.221.0": {
         "integrity": "a5f1aa6e7909dbea271754fd4ab3f4e687aeff4873b4cef9a320af813adb489a",
@@ -35,11 +35,54 @@
       }
     }
   },
-  "remote": {},
+  "remote": {
+    "https://denopkg.com/kz-io/common-exceptions@dev/mod.ts": "8595e6ba30d80b92844d05569f0b04a124ee35d9c4bade107fbe68bbb1be1a9c",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/_internal/constants.ts": "fabd05f241c74ba78564d37882750602e2b85c3410e24878eb900608dc2243c4",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/_internal/defined_args.ts": "796c9034f0ec0ee73f6a4ba023cad3bb309ccdd5a948881eef721c1b40a7de25",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/_internal/hash_data.ts": "f446d827d27e759c112d7ffb174ba6dd3794e444fb4bd4118ac4fc8680f7d0d8",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/_internal/mod.ts": "2038bd54cb9cc3a7292a0e9bee08294e6abcc4a3d0123007b12e90fd0c169568",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/argument_exception.ts": "54e70265a9919c5ca5608adf2242a0d512b86ed5c50abc1b53fe75ca9177c8c8",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/argument_index_exception.ts": "172f4cc18c51e24f1ad995662000312e73b4e3e79b61c4af393734d06b31957f",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/assertion_exception.ts": "bb3e2ed05487045a682d338d401df24d4f309bc66668480497bbf7b5c2814b0a",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/connection_exception.ts": "945058e866cc35d617487a8cc8c5f74a9242bc3541ec49a2d424ced9d13a246e",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/decorator_exception.ts": "fa7b852edd23289a49c5e09587225f46d15ab762a134be1f44dd0e543b7875cd",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/disk_exception.ts": "175683f560949a3d432ebfbcd14409a544fa4cd877d6d3ce1e57f38946735081",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/exception.ts": "365a25609154b185ba9b800d1d818626b4e6b583505e2851c84d97762707e1ad",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/external_exception.ts": "47e5e7ad5e7ef4f1a22edad6390f99240441256d5e18ff9ee88eebdece4dc2fa",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/format_exception.ts": "66f03a05231b13de058169e52f36fc528c1a0fa216e3902f5eeefb9d3e3573d4",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/index_exception.ts": "3dc50b1071dc7561a8d40a4db4038667f69c2143729ba33b8c63759eb0ec0ee0",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/interrupt_exception.ts": "b2ac5b2c56e88072699003efc3f25522d449c198535a30821c1a2b48b9ab6625",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/invalid_exception.ts": "b7971808a74221a9acfc7aea1f4f4ee389d3c316b31f30a21edc4e86bb3f6850",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/iteration_exception.ts": "fe3b67a4b3c724280a270ad5ad4e09e0d5fc0a360629b828feb4565a27b73c22",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/key_exception.ts": "94f13b206f39c99575c14ef6177e4ab1443053632b281a0ee79e9ceadf46c186",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/memory_exception.ts": "3d3dde1987d7b75e0d721febf4deb69eb0969807b6df6a89dd7e38d720b1c442",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/method_exception.ts": "7f78a5f583fc7e1d8324373bbb1242ed497f6b7bd8d9f225a3ce0a47cc622c4e",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/mod.ts": "2d73070fc570119883755decd6b8fe5342c9c17e80c67ee29c64961be1fbb97c",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/not_found_exception.ts": "7efa5b6e28a5244e1caa047dc819226dc981ef9b190dd406d98567a25f66ea92",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/not_implemented_exception.ts": "a00a4d8285502a6227ef93955800bdd9c6e93ec3128163871e6b4e65f346fb9d",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/not_supported_exception.ts": "eeec53fe5ebfa2ce2dce634138c5ab8b6033e32e6d0986535c26337290ac85b9",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/operation_exception.ts": "c357fd58c011e5b619e9598c77603d95ad5d867ae4dcd08924a3c8003a2733c3",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/os_exception.ts": "6557ba2e26f57fae4e1d821ef998adbda4f9e3194c8b5da8d4cbe047ea07025e",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/process_exception.ts": "2e4a9bd7820f40fcb8ad416d490b9fb8f95e883eb9ab49416502c6cd0d68def1",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/range_exception.ts": "7356467ea24036e9493881d9bd73895da63a6faa6bfa1294095d90c591832ca6",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/recursion_exception.ts": "109c86cd6d414bd5cddd330776dc9e687862f90ad57f575a61db1d06e30e12f7",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/timeout_exception.ts": "3362208ea2862f4bc41c29967dbf21cee33c91973f3fa643dea1ac5fcbef108f",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/exceptions/value_exception.ts": "8ba441ba194322c2c26f4f57e16318bf7eb4d4f3f2e1c759a194b5c95ae2afda",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/mod.ts": "c40e1d9aa04e4ad397fbcc68554fa0aab9026d49fd3fb20360aee59ddbcac23f",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/types/mod.ts": "960298802a8d88715f7cc6cedc8a72bc3edeca082edae243e8f05b1be511ee8b",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/types/type_aliases.ts": "aed68e95b7b04add9ace27c7f4d820ba24c814cc23c143bba95309f9a8375ce1",
+    "https://denopkg.com/kz-io/common-exceptions@dev/src/version.ts": "2dd8132396e50be236b3f0cc4e5530087a655d1262c4e4edb8a2bb464341b573",
+    "https://denopkg.com/kz-io/common-types@dev/mod.ts": "8595e6ba30d80b92844d05569f0b04a124ee35d9c4bade107fbe68bbb1be1a9c",
+    "https://denopkg.com/kz-io/common-types@dev/src/mod.ts": "8c67d18c185be04109f342dc08a5e6e88aaca71ba16af69f252e2cf911bf08f1",
+    "https://denopkg.com/kz-io/common-types@dev/src/types/enums.ts": "9c395897f22d8d939e3d5d6f381ff5518ceaf169803339f58497e6f26a0ef294",
+    "https://denopkg.com/kz-io/common-types@dev/src/types/interfaces.ts": "21444d08bcb46b523140bf6c655d143b68bd98d8864983664e37c4528c5a35d8",
+    "https://denopkg.com/kz-io/common-types@dev/src/types/mod.ts": "0287e8ab1e18aa16c70ecbb76da8eeaaaba77933c27be2a79fecb71f62ffe8a6",
+    "https://denopkg.com/kz-io/common-types@dev/src/types/type_aliases.ts": "8c0448143ccba18c28362db026d91685006e4d5d72844f4907d9b6a58be9c146",
+    "https://denopkg.com/kz-io/common-types@dev/src/version.ts": "8d386c1063577edf6d2a49b047f61a82636cb926fb4a6103012ae88bd9012404"
+  },
   "workspace": {
     "dependencies": [
-      "jsr:@kz/common-exceptions@^0.0.1",
-      "jsr:@kz/common-types@^0.0.2",
+      "jsr:@kz/common-exceptions@0.0.2",
       "jsr:@std/assert@^0.221.0",
       "jsr:@std/testing@^0.221.0"
     ]
