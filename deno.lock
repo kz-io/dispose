@@ -2,11 +2,22 @@
   "version": "3",
   "packages": {
     "specifiers": {
+      "jsr:@kz/common-exceptions@0.0.2": "jsr:@kz/common-exceptions@0.0.2",
+      "jsr:@kz/common-types@^0.0.6": "jsr:@kz/common-types@0.0.6",
       "jsr:@std/assert@^0.221.0": "jsr:@std/assert@0.221.0",
       "jsr:@std/fmt@^0.221.0": "jsr:@std/fmt@0.221.0",
       "jsr:@std/testing@^0.221.0": "jsr:@std/testing@0.221.0"
     },
     "jsr": {
+      "@kz/common-exceptions@0.0.2": {
+        "integrity": "ebd6e38fe554379f343a40f5df5d430a24837ada93bddf0411d4c0bb283626dd",
+        "dependencies": [
+          "jsr:@kz/common-types@^0.0.6"
+        ]
+      },
+      "@kz/common-types@0.0.6": {
+        "integrity": "992c4a9502432537d43ece19e9e062fce123afe64dcba8a3b1b1c5086a8fa430"
+      },
       "@std/assert@0.221.0": {
         "integrity": "a5f1aa6e7909dbea271754fd4ab3f4e687aeff4873b4cef9a320af813adb489a",
         "dependencies": [
@@ -71,6 +82,7 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@kz/common-exceptions@0.0.2",
       "jsr:@std/assert@^0.221.0",
       "jsr:@std/testing@^0.221.0"
     ]

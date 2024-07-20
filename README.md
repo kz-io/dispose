@@ -12,15 +12,13 @@ maintenance of complex, performant, and scalable
 
 <h1 align="center">@kz/dispose</h1>
 <p align="center">
-The <code>@kz/core/dispose</code> module provides types and features for using and disposing of managed resources.
+The <code>@kz/dispose</code> module provides types and features for using and disposing of managed resources.
 </p>
 
 <p align="center">
 <a href="https://jsr.io/@kz/dispose">Overview</a> |
 <a href="https://jsr.io/@kz/dispose/doc">API Docs</a>
 </p>
-
----
 
 The dispose pattern allows developers to create classes associated with
 resources that need to be released when they are no longer needed.
